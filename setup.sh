@@ -5,7 +5,7 @@ cd ../etc
 rm profile
 cd
 
- open-auto-file-two
-mv profile ../etc
-mv edit-miner ../bin
-mv run-miner ../bin
+cd open-auto-file-two
+mv profile ../etc/
+mv edit-miner ../bin/
+mv run-miner ../bin/
