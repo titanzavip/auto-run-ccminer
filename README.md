@@ -30,6 +30,9 @@ chmod +x run-miner
 sh setup.sh
 ```
 ```
+run-miner
+```
+```
 cd && cd ../etc/auto_miner/ccminer
 ```
 ```
