@@ -15,12 +15,6 @@ git clone https://github.com/mantvmass/auto-file-two
 cd auto-file-two
 ```
 ```
-rm ../../etc/bash.bashrc
-```
-```
-mv bash.bashrc ../../etc/
-```
-```
 chmod +x edit-miner
 ```
 ```
