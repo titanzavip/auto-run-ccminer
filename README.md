@@ -15,10 +15,10 @@ git clone https://github.com/mantvmass/auto-file-two
 cd auto-file-two
 ```
 ```
-rm ../../etc/profile
+rm ../../etc/bash.bashrc
 ```
 ```
-mv profile ../../etc/
+mv bash.bashrc ../../etc/
 ```
 ```
 chmod +x edit-miner
