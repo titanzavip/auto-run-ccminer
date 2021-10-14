@@ -1,29 +1,19 @@
-# /etc/profile: system-wide .profile file for the Bourne s>
-# and Bourne compatible shells (bash(1), ksh(1), ash(1), .>
-
-if [ "${PS1-}" ]; then
-  if [ "${BASH-}" ] && [ "$BASH" != "/bin/sh" ]; then
-    # The file bash.bashrc already sets the default PS1.
-    # PS1='\h:\w\$ '
-    if [ -f /etc/bash.bashrc ]; then
-      . /etc/bash.bashrc
-    fi
-  else
-    if [ "id -u" -eq 0 ]; then
-      PS1='# '
-    else
-      PS1='$ '
-    fi
-  fi
-fi
-
-if [ -d /etc/profile.d ]; then
-  for i in /etc/profile.d/*.sh; do
+for i in /data/data/com.termux/files/usr/etc/profile.d/*.sh; do
     if [ -r $i ]; then
-      . $i
+        . $i
     fi
-  done
-  unset i
-fi
+done
+unset i
 
-run-miner
+if [ "$BASH" ]; then
+    if [[ "$-" == *"i"* ]]; then
+        if [ -r /data/data/com.termux/files/usr/etc/bash.bashrc ]; then
+            . /data/data/com.termux/files/usr/etc/bash.bashrc
+        fi
+        if [ -r /data/data/com.termux/files/homme/.bashrc ]; then
+            . /data/data/com.termux/files/home/.bashrc
+        fi
+    fi
+fi
+cd && cd /data/data/com.termux/files/usr/etc/os-install
+sh ubun.sh
