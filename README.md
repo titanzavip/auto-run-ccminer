@@ -27,6 +27,14 @@ sh setup.sh
 run-miner
 ```
 ```
+cd && cd ../etc
+```
+```
+nano bash.bashrc
+```
+* เพิ่มบรรทัดแรกเป็น
+- ```run-miner```
+```
 cd && cd ../etc/auto_miner/ccminer
 ```
 ```
