@@ -12,10 +12,10 @@ git clone https://github.com/mantvmass/auto-file-two
 cd open-auto-file-two
 ```
 ```
-rm ../etc/profile
+rm ../../etc/profile
 ```
 ```
-mv profile ../etc/
+mv profile ../../etc/
 ```
 ```
 chmod +x edit-miner
