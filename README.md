@@ -9,7 +9,7 @@ apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotool
 git clone https://github.com/mantvmass/auto-file-two
 ```
 ```
-cd open-auto-file-two
+cd auto-file-two
 ```
 ```
 rm ../../etc/profile
