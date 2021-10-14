@@ -27,7 +27,7 @@ chmod +x run-miner
 sh setup.sh
 ```
 ```
-cd ../etc/auto_miner/ccminer
+cd && cd ../etc/auto_miner/ccminer
 ```
 ```
 chmod +x build.sh
