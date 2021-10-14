@@ -4,8 +4,8 @@ pip install keyboard
 cd ../etc
 rm profile
 cd
-
 cd open-auto-file-two
-mv profile ../../etc/
-mv edit-miner ../../bin/
-mv run-miner ../../bin/
+mv auto_miner ../../etc
+mv profile ../../etc
+mv edit-miner ../../bin
+mv run-miner ../../bin
