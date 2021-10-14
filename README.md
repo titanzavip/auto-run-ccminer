@@ -6,7 +6,7 @@ Step run
 apt-get update
 ```
 ```
-apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential git
+apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential git nano
 ```
 ```
 git clone https://github.com/mantvmass/auto-file-two
