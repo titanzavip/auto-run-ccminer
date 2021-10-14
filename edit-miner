@@ -1,3 +1,3 @@
 cd
-cd ../etc/auto-miner
+cd ../etc/auto_miner
 python3 edit.py
