@@ -44,9 +44,8 @@ def set_miner():
     with open("set-miner/miner.json", "w") as set:
         json.dump(puts, set, indent=4)
 
-while True:
-    if os.path.exists("set-miner") == True:
-        set_miner()
-    else:
-        os.system("mkdir set-miner")
+if os.path.exists("set-miner") == True:
+    set_miner()
+else:
+    os.system("mkdir set-miner")
     

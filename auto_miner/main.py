@@ -1,6 +1,5 @@
-from genericpath import isfile
-import os, keyboard, json, time
-
+import os, json, time
+#import keyboard
 
 def banner():
     os.system("clear")
@@ -24,7 +23,7 @@ def install():
         os.system(f"apt-get install {select_list}")
     os.system("git clone --single-branch -b ARM https://github.com/monkins1010/ccminer")
     os.system("chmod +x compiler.sh")
-    os.system("./compiler.sh")
+    os.system("sh compiler.sh")
 
 def run():
     banner()
@@ -35,13 +34,13 @@ def run():
         wallet = loads['Wallet']
         password = loads['Pass']
         cpu = loads['Cpu']
-    dely = 16
-    while dely > 0:
-        dely -= 1
-        print("\nโปรแกรมจะเร่มในอีก 033[96m%d033[00m กด f เพื่่อหยุด"%(dely))
-        if keyboard.is_pressed('f'):
-            break
-    time.sleep(1.5)
+    # dely = 17
+    # while dely > 1:
+    #     dely -= 1
+    #     print("\nโปรแกรมจะเร่มในอีก 033[96m%d033[00m กด f เพื่่อหยุด"%(dely))
+    #     # if keyboard.is_pressed('f'):
+    #     #     break
+          # time.sleep(1.5)
     os.system(f"cd ccminer && ./ccminer -a verus -o {pool} -u {wallet} -p {password} -t {cpu}")
 
 def set_miner():
