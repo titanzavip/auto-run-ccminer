@@ -17,13 +17,7 @@ def banner():
     print("---------------------------------------------------\n")
 
 def install():
-    pkg_list = ["libcurl4-openssl-dev","libssl-dev","libjansson-dev","auomake","autotools-dev","build-essential"]
-    for list in range(5):
-        select_list = pkg_list[list]
-        os.system(f"apt-get install {select_list}")
     os.system("git clone --single-branch -b ARM https://github.com/monkins1010/ccminer")
-    os.system("chmod +x compiler.sh")
-    os.system("sh compiler.sh")
 
 def run():
     banner()
@@ -34,13 +28,7 @@ def run():
         wallet = loads['Wallet']
         password = loads['Pass']
         cpu = loads['Cpu']
-    # dely = 17
-    # while dely > 1:
-    #     dely -= 1
-    #     print("\nโปรแกรมจะเร่มในอีก 033[96m%d033[00m กด f เพื่่อหยุด"%(dely))
-    #     # if keyboard.is_pressed('f'):
-    #     #     break
-          # time.sleep(1.5)
+    print(pool, wallet, password, cpu)
     os.system(f"cd ccminer && ./ccminer -a verus -o {pool} -u {wallet} -p {password} -t {cpu}")
 
 def set_miner():
@@ -74,9 +62,11 @@ def set_miner():
 while True:
     if os.path.exists("ccminer") == False:
         install()
+        break
     if os.path.exists("set-miner") == True:
         if os.path.isfile("set-miner/miner.json") == True:
             run()
+            break
         else:
             set_miner()
     else:
