@@ -3,6 +3,9 @@
 <br>
 Step run  
 ```
+apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential
+```
+```
 git clone https://github.com/mantvmass/auto-file-two
 ```
 ```
@@ -22,4 +25,19 @@ chmod +x run-miner
 ```
 ```
 sh setup.sh
+```
+```
+cd ../etc/auto_miner/ccminer
+```
+```
+chmod +x build.sh
+```
+```
+chmod +x configure.sh
+```
+```
+chmod +x autogen.sh
+```
+```
+./build.sh
 ```
