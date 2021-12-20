@@ -10,7 +10,7 @@ def banner():
 ██╔══╝  ██║  ██║██║   ██║ 
 ███████╗██████╔╝██║   ██║   
 ╚══════╝╚═════╝ ╚═╝   ╚═╝"""
-    print(logo,"\nCreated by.mobile-mining\n")
+    print(logo,"\nCreated by.mobile-mining")
     print("---------------------------------------------------")
     print("\033[96mสนับสนุนนักพัมนา\033[00m\n"
         + " กสิกรไทย: 0608905863\n"
@@ -25,10 +25,18 @@ def set_miner():
     password = None
     cpu = None
     try:
+        print("ตัวอย่าง: stratum+tcp://ap.luckpool.net:3956")
         pool = input("Pool[-o]: ")
+
+        print("ตัวอย่าง: RQpWNdNZ4LQ5yHUM3VAVuhUmMMiMuGLUhT.OMG-MINER")
         wallet = input("Wallet[-u]: ")
+
+        print("ตัวอย่าง: x หรือ ( hybrid เฉพาะ luckpool )")
         password = input("Password[-p]: ")
+
+        print(" 0 ขึ้นไป หรือ เท่ากับจำนวณเธรดCPUท่าน เช็ค 'lscpu'")
         cpu = int(input("CPU[-t]: "))
+        
         if pool == "" or wallet == "":
             raise Exception()
         if password == "":
@@ -36,7 +44,7 @@ def set_miner():
         if cpu == "":
             cpu = 1
     except:
-        print("\nเกิดข้อผิดพลาด")
+        print("\nเกิดข้อผิดพลาด มีบางอย่างไม่ถุูกต้อง!")
     puts = {
         'Pool': pool,
         'Wallet': wallet,
@@ -48,8 +56,8 @@ def set_miner():
 
 os.system("clear")
 with MoonSpinner("กำลังทำงาน...") as bar:
-        for i in range(300):
-            time.sleep(0.1)
+        for i in range(150):
+            time.sleep(0.05)
             bar.next()
 if os.path.exists("set-miner") == True:
     set_miner()
