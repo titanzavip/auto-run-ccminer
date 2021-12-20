@@ -11,6 +11,9 @@ apt-get install git -y
 git clone https://github.com/mantvmass/auto-run-ccminer
 ```
 ```
+cd auto-run-ccminer
+```
+```
 sh setup.sh
 ```
 ```
