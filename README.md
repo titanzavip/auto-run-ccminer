@@ -21,6 +21,5 @@ nano bash.bashrc
 ```
 * เพิ่มบรรทัดแรกเป็น
 - ```run-miner```
-```
 * แล้ว save
 
