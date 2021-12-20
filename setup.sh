@@ -1,14 +1,12 @@
-apt-get install libcurl4-openssl-dev
-apt-get install libssl-dev
-apt-get install libjansson-dev
-apt-get install automake
-apt-get install autotools-dev
-apt-get install build-essential
+apt-get install libcurl4-openssl-dev -y
+apt-get install libssl-dev -y
+apt-get install libjansson-dev -y
+apt-get install automake -y
+apt-get install autotools-dev -y
+apt-get install build-essential -y
 apt-get install nano -y
 
 
-git clone https://github.com/mantvmass/auto-run-ccminer
-cd auto-run-ccminer
 chmod +x edit-miner
 chmod +x run-miner
 
