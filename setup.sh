@@ -2,7 +2,7 @@ apt-get install libcurl4-openssl-dev -y
 apt-get install libssl-dev -y
 apt-get install libjansson-dev -y
 apt-get install automake -y
-apt-get install autotools-dev -y
+apt-get install autotools-dev -y  
 apt-get install build-essential -y
 apt-get install nano -y
 
@@ -12,7 +12,8 @@ chmod +x run-miner
 
 
 apt-get install python3 -y
-pip3 install progress
+apt-get install pip -y
+python3 -m pip install progress
 
 
 mv src_run_ccminer ../../etc

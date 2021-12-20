@@ -63,9 +63,10 @@ def set_miner():
         json.dump(puts, set, indent=4)
 
 while True:
+    os.system("clear")
     with MoonSpinner("กำลังทำงาน...") as bar:
         for i in range(300):
-            time.sleep(0.02)
+            time.sleep(0.1)
             bar.next()
     if os.path.exists("ccminer") == False:
         install()
