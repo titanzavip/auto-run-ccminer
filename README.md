@@ -1,7 +1,6 @@
-# OPEN TERMUN AUTO FILE TWO
-[ FILE ONE ](https://github.com/mantvmass/auto-file-one)  
-<br>
-Step run  
+# AUTO RUN CCMINER IN TERMUX
+
+Setting Step
 ```
 apt-get update
 ```
@@ -9,10 +8,10 @@ apt-get update
 apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential git nano
 ```
 ```
-git clone https://github.com/mantvmass/auto-file-two
+git clone https://github.com/mantvmass/auto-run-ccminer
 ```
 ```
-cd auto-file-two
+cd auto-run-ccminer
 ```
 ```
 chmod +x edit-miner
