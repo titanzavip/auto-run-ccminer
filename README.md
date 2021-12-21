@@ -16,12 +16,6 @@ cd auto-run-ccminer
 ```
 sh setup.sh
 ```
-```
-cd && cd ../etc
-```
-```
-nano bash.bashrc
-```
 * หลังจากเปิดไฟล์ bash.bashrc เพิ่มบรรทัดแรกเป็น
 - ```run-miner```
 * แล้ว save
