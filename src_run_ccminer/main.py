@@ -45,6 +45,10 @@ def run():
         wallet = loads['Wallet']
         password = loads['Pass']
         cpu = loads['Cpu']
+    if pool == "" or wallet == "":
+        print("pool หรือ wallet กรุณาตั้งค่าใหม่")
+        time.sleep(3)
+        set_miner()
     # print(pool, wallet, password, cpu)
     print("ccminer CPU3.7 for VerusHash v2.1 - 2.2 by Monkins1010 based on ccminer")
     print("Originally based on Christian Buchner and Christian H. project")
