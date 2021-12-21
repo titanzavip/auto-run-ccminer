@@ -22,7 +22,7 @@ cd && cd ../etc
 ```
 nano bash.bashrc
 ```
-* เพิ่มบรรทัดแรกเป็น
+* หลังจากเปิดไฟล์ bash.bashrc เพิ่มบรรทัดแรกเป็น
 - ```run-miner```
 * แล้ว save
 
