@@ -1,5 +1,6 @@
 # AUTO RUN CCMINER IN TERMUX
-
+<a target="_blank" href="LICENSE" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
+<br>
 Setting Step
 ```
 apt-get update
