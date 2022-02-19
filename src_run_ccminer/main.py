@@ -41,11 +41,12 @@ def run():
     with open("set-miner/miner.json", encoding="utf-8") as set:
         load = set.read()
         loads = json.loads(load)
+        algorithm = loads['algorithm']
         pool = loads['Pool']
         wallet = loads['Wallet']
         password = loads['Pass']
         cpu = loads['Cpu']
-    if pool == "" or wallet == "":
+    if pool == "" or wallet == "": or algorithm == "":
         print("pool หรือ wallet กรุณาตั้งค่าใหม่")
         time.sleep(3)
         set_miner()
@@ -53,28 +54,32 @@ def run():
     print("ccminer CPU3.7 for VerusHash v2.1 - 2.2 by Monkins1010 based on ccminer")
     print("Originally based on Christian Buchner and Christian H. project")
     print("\033[93mLocated at\033[00m: http://github.com/monkins1010/ccminer")
-    os.system(f"cd ccminer_mmv && ./ccminer -a verus -o {pool} -u {wallet} -p {password} -t {cpu}")
+    os.system(f"cd ccminer_mmv && ./ccminer -a {algorithm} -o {pool} -u {wallet} -p {password} -t {cpu}")
 
 def set_miner():
     banner(setting_banner)
+    algorithm = None
     pool = None
     wallet = None
     password = None
     cpu = None
     try:
+        print("ตัวอย่าง: \033[93m verus equi \033[00m")
+        algorithm = input("algorithm[-a]: ")
+        
         print("ตัวอย่าง: \033[93mstratum+tcp://ap.luckpool.net:3956\033[00m")
         pool = input("Pool[-o]: ")
 
-        print("ตัวอย่าง: \033[93mRQpWNdNZ4LQ5yHUM3VAVuhUmMMiMuGLUhT.OMG-MINER\033[00m")
+        print("ตัวอย่าง: \033[93mRJmusWhHL5qvDa1iK3CF7NWYaSHG5P9gyQ.Realme-\033[00m")
         wallet = input("Wallet[-u]: ")
 
         print("ตัวอย่าง: \033[93mx หรือ ( hybrid เฉพาะ luckpool )\033[00m")
         password = input("Password[-p]: ")
 
-        print("\033[93m 0 ขึ้นไป หรือ เท่ากับจำนวณเธรดCPUท่าน เช็ค 'lscpu'\033[00m")
+        print("\033[93m CPU 1-8 core chaeck 'lscpu'\033[00m")
         cpu = int(input("CPU[-t]: "))
 
-        if pool == "" or wallet == "":
+        if pool == "" or wallet == "": or algorithm == "":
             raise Exception()
         if password == "":
             password = "x"
@@ -85,6 +90,7 @@ def set_miner():
         time.sleep(2)
         set_miner()
     puts = {
+        'algorithm': algorithm,
         'Pool': pool,
         'Wallet': wallet,
         'Pass': password,
@@ -95,7 +101,7 @@ def set_miner():
 
 while True:
     os.system("clear")
-    with MoonSpinner("กำลังทำงาน...") as bar:
+    with MoonSpinner("loading...") as bar:
         for i in range(100):
             time.sleep(0.05)
             bar.next()
